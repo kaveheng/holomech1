@@ -1,2 +1,3 @@
 Flask==3.0.1
 Gunicorn==21.2.0
+indeterminatebeam
