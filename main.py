@@ -49,5 +49,13 @@ def get_bending_moment():
 
     return jsonify({'bending_moments': bending_moments})
 
+@app.route('/get_normal_force', methods=['POST'])
+def get_normal_force():
+    data = request.get_json()
+    x_positions = data['x_positions']
+    bending_moments = [beam.get_normal_force(x) for x in x_positions]
+
+    return jsonify({'normal_force': normal_force})
+
 #if __name__ == '__main__':
     #app.run(debug=True)
