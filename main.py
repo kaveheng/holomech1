@@ -53,7 +53,7 @@ def get_bending_moment():
 def get_normal_force():
     data = request.get_json()
     x_positions = data['x_positions']
-    bending_moments = [beam.get_normal_force(x) for x in x_positions]
+    normal_force = [beam.get_normal_force(x) for x in x_positions]
 
     return jsonify({'normal_force': normal_force})
 
